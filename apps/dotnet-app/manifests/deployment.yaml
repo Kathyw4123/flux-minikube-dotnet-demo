@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dotnet-app
-        image: ghcr.io/YOUR_USER/dotnet-app:latest  # We'll build this next
+        image: ghcr.io/kathyw4123/dotnet-app:latest  # We'll build this next
         ports:
         - containerPort: 80
         env:

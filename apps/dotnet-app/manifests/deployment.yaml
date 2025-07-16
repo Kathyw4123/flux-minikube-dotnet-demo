@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dotnet-app-deployment  # ⭐ THIS IS MISSING ⭐
+  name: dotnet-app  # ⭐ THIS IS MISSING ⭐
   namespace: default
 spec:
   replicas: 1

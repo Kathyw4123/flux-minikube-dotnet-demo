@@ -1,22 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  name: dotnet-app
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: dotnet-app
   template:
-    metadata:
-      labels:
-        app: dotnet-app
     spec:
       containers:
       - name: dotnet-app
-        image: ghcr.io/kathyw4123/dotnet-app:latest  # We'll build this next
-        ports:
-        - containerPort: 80
-        env:
-        - name: ASPNETCORE_ENVIRONMENT
-          value: Development
+        image: dotnet-app:latest  # Local image name
+        imagePullPolicy: Never    # Critical - prevents Kubernetes from looking online

@@ -1,9 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
+metadata:
+  name: dotnet-app-deployment  # ⭐ THIS IS MISSING ⭐
+  namespace: default
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: your-app
   template:
+    metadata:
+      labels:
+        app: your-app
     spec:
       containers:
       - name: dotnet-app
-        image: dotnet-app:latest  # Local image name
-        imagePullPolicy: Never    # Critical - prevents Kubernetes from looking online
+        image: dotnet-app:latest  # Your Minikube image
+        imagePullPolicy: Never    # Critical for local imagesne

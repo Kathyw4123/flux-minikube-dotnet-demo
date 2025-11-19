@@ -1,0 +1,10 @@
+replicaCount: 2
+
+image:
+  repository: dotnet-app-demo
+  tag: "v1"
+  pullPolicy: Never     # Important! We use local image only
+
+service:
+  type: ClusterIP
+  port: 8080

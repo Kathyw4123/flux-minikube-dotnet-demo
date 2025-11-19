@@ -1,0 +1,6 @@
+apiVersion: v2
+name: dotnet-app
+description: A simple .NET 8 app managed by Flux
+type: application
+version: 0.1.0
+appVersion: "v1"

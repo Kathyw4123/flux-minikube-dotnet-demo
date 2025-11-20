@@ -8,3 +8,6 @@ image:
 service:
   type: ClusterIP
   port: 8080
+
+release:
+  namespace: dotnet-app   # optional but nice for slides / clarity  

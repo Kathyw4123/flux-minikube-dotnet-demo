@@ -2,10 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}   # ← THIS LINE IS CRITICAL
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 8080
+      protocol: TCP
   selector:
-    app: {{ .Release.Name }} 
+    app: {{ .Release.Name }}

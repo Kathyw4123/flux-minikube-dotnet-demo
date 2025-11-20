@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/Kathyw4123/flux-minikube-demo
+  url: https://github.com/Kathyw4123/flux-minikube-dotnet-demo.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization

@@ -21,26 +21,5 @@ flux bootstrap github \
   --path=clusters/minikube \
   --personal
 
-# Deploy the app via HelmRelease that lives in Git
-kubectl apply -f - <<YAML
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
-  name: dotnet-app
-  namespace: flux-system
-spec:
-  interval: 1m
-  chart:
-    spec:
-      chart: ./helm/dotnet-app
-      sourceRef:
-        kind: GitRepository
-        name: flux-system
-  values:
-    replicaCount: 2
-    image:
-      tag: v1
-YAML
-
 # Open the app
-minikube service dotnet-app --url
+minikube service dotnet-app -n dotnet-app --url

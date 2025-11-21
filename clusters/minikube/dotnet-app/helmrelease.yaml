@@ -10,7 +10,7 @@ spec:
       chart: ./helm/dotnet-app
       sourceRef:
         kind: GitRepository
-        name: dotnet-app
+        name: flux-system
         namespace: flux-system
   values:
     replicaCount: 2

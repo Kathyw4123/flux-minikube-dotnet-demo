@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - clusters/minikube/flux-system
+  - clusters/minikube/dotnet-app
+  - clusters/minikube/namespaces/dotnet-app.yaml

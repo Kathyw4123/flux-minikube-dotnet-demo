@@ -3,5 +3,3 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- ../dotnet-app/kustomization.yaml
-- ../namespaces/dotnet-app.yaml

@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: dotnet-app
-  namespace: dotnet-app          # HelmRelease object lives here (Flux controllers namespace)
+  namespace: dotnet-app          
 spec:
   interval: 1m
   chart:

@@ -6,7 +6,7 @@ image:
   pullPolicy: Never     # Important! We use local image only
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 8080
 
 release:

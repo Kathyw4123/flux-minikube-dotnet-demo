@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: dotnet-app-demo
-  tag: "v1"
+  repository: dotnet-app
+  tag: "v2"
   pullPolicy: Never     # Important! We use local image only
 
 service:

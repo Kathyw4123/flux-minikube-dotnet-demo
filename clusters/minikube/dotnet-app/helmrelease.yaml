@@ -13,6 +13,6 @@ spec:
         name: flux-system
         namespace: flux-system
   values:
-    replicaCount: 2
+    replicaCount: 3
     image:
       tag: v1
